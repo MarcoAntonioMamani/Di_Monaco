@@ -25,13 +25,8 @@ Public Class P_Principal
         'poner numiModulos a los modulos
         'poner numiModulos a los modulos y tambien la version
         FP_Configuracion.Tag = New Version(1, "2.9.8")
-        FP_RecHumanos.Tag = New Version(2, "2.9.8")
         FP_Escuela.Tag = New Version(3, "2.9.9")
-        FP_Socios.Tag = New Version(4, "3.0.9")
         FP_Certificacion.Tag = New Version(5, "2.9.9")
-        FP_Lavadero.Tag = New Version(6, "3.0.1")
-        FP_Hotel.Tag = New Version(7, "3.0.0")
-        FP_Remolque.Tag = New Version(8, "3.0.0")
 
         'obtenerVersion
         Dim acerca As New P_Acerca
@@ -113,13 +108,8 @@ Public Class P_Principal
             'PictureBox7.SizeMode = PictureBoxSizeMode.StretchImage
 
             MetroTilePanel1.BackgroundImage = Image.FromFile(ruta)
-            MetroTilePanel2.BackgroundImage = Image.FromFile(ruta)
             MetroTilePanel3.BackgroundImage = Image.FromFile(ruta)
-            MetroTilePanel4.BackgroundImage = Image.FromFile(ruta)
             MetroTilePanel5.BackgroundImage = Image.FromFile(ruta)
-            MetroTilePanel6.BackgroundImage = Image.FromFile(ruta)
-            MetroTilePanel7.BackgroundImage = Image.FromFile(ruta)
-            MetroTilePanel8.BackgroundImage = Image.FromFile(ruta)
 
             Me.Refresh()
 
@@ -185,13 +175,8 @@ Public Class P_Principal
     Private Sub _PCargarPrivilegios()
         Dim listaTabs As New List(Of DevComponents.DotNetBar.Metro.MetroTilePanel)
         listaTabs.Add(MetroTilePanel1)
-        listaTabs.Add(MetroTilePanel2)
         listaTabs.Add(MetroTilePanel3)
-        listaTabs.Add(MetroTilePanel4)
         listaTabs.Add(MetroTilePanel5)
-        listaTabs.Add(MetroTilePanel6)
-        listaTabs.Add(MetroTilePanel7)
-        listaTabs.Add(MetroTilePanel8)
 
         Dim idRolUsu As String = gi_userRol
 
@@ -323,17 +308,8 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btRHFeriados_Click(sender As Object, e As EventArgs) Handles btRHFeriados.Click
-        Dim frm As New F1_Feriado
-        frm._nameButton = btRHFeriados.Name
-        frm.Show()
-    End Sub
 
-    Private Sub btRHPersonal_Click(sender As Object, e As EventArgs) Handles btRHPersonal.Click
-        Dim frm As New F1_Personal
-        frm._nameButton = btRHPersonal.Name
-        frm.Show()
-    End Sub
+
 
     Private Sub btEscVehiculo_Click(sender As Object, e As EventArgs) Handles btEscVehiculo.Click
         Dim frm As New F1_Vechiculo
@@ -365,17 +341,7 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btSocSocio_Click(sender As Object, e As EventArgs) Handles btSocSocio.Click
-        Dim frm As New F0_Socio
-        frm._nameButton = btSocSocio.Name
-        frm.Show()
-    End Sub
 
-    Private Sub btSocPagos_Click(sender As Object, e As EventArgs) Handles btSocPagos.Click
-        Dim frm As New F0_PagosSocio
-        frm._nameButton = btSocPagos.Name
-        frm.Show()
-    End Sub
 
     Private Sub btEscClaPracticas_Click(sender As Object, e As EventArgs) Handles btEscClaPracticas.Click
         'Dim frm As New F0_ClasesPracticas2
@@ -414,12 +380,12 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btSocRepSocio_Click(sender As Object, e As EventArgs) Handles btSocRepSocio.Click
+    Private Sub btSocRepSocio_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_Socio
         frm.Show()
     End Sub
 
-    Private Sub btSocRepSocioEdad_Click(sender As Object, e As EventArgs) Handles btSocRepSocioEdad.Click
+    Private Sub btSocRepSocioEdad_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_SocioEdad
         frm.Show()
     End Sub
@@ -431,7 +397,7 @@ Public Class P_Principal
         'frm.Show()
     End Sub
 
-    Private Sub btSocRepSocioPagos_Click(sender As Object, e As EventArgs) Handles btSocRepSocioPagos.Click
+    Private Sub btSocRepSocioPagos_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_Pagos
         frm.Show()
     End Sub
@@ -441,27 +407,27 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btRHDescFijos_Click(sender As Object, e As EventArgs) Handles btRHDescFijos.Click
+    Private Sub btRHDescFijos_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_DescuentosFijos
         frm.Show()
     End Sub
 
-    Private Sub btRHAntigueVacaciones_Click(sender As Object, e As EventArgs) Handles btRHAntigueVacaciones.Click
+    Private Sub btRHAntigueVacaciones_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_Antigue_Vacacion
         frm.Show()
     End Sub
 
-    Private Sub btRHBonosDesc_Click(sender As Object, e As EventArgs) Handles btRHBonosDesc.Click
+    Private Sub btRHBonosDesc_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_BonosDescuentos
         frm.Show()
     End Sub
 
-    Private Sub btRHRepPlanillaSueldos_Click(sender As Object, e As EventArgs) Handles btRHRepPlanillaSueldos.Click
+    Private Sub btRHRepPlanillaSueldos_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_PlanillaSueldos
         frm.Show()
     End Sub
 
-    Private Sub btRHPedidoVacacion_Click(sender As Object, e As EventArgs) Handles btRHPedidoVacacion.Click
+    Private Sub btRHPedidoVacacion_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_PedidoVacacion
         frm.Show()
     End Sub
@@ -497,12 +463,12 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btSocRepSocioPagosGral_Click(sender As Object, e As EventArgs) Handles btSocRepSocioPagosGral.Click
+    Private Sub btSocRepSocioPagosGral_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_PagosMora
         frm.Show()
     End Sub
 
-    Private Sub btSocRepSocioPagosMortuoriaGral_Click(sender As Object, e As EventArgs) Handles btSocRepSocioPagosMortuoriaGral.Click
+    Private Sub btSocRepSocioPagosMortuoriaGral_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_PagosMortuorias
         frm.Show()
     End Sub
@@ -523,36 +489,14 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btSocRepSocioListaSociosActivos_Click(sender As Object, e As EventArgs) Handles btSocRepSocioListaSociosActivos.Click
+    Private Sub btSocRepSocioListaSociosActivos_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_SocioListaSociosActivos
         frm.Show()
     End Sub
 
-    Private Sub btLavCliente_Click(sender As Object, e As EventArgs) Handles btLavCliente.Click
-        Dim frm As New F1_Cliente_L
-        frm._nameButton = btLavCliente.Name
-        frm.Show()
-    End Sub
 
-    Private Sub btHotCliente_Click(sender As Object, e As EventArgs) Handles btHotCliente.Click
-        Dim frm As New F1_CLIENTE_H
-        frm._nameButton = btHotCliente.Name
-        frm.Show()
-    End Sub
 
-    Private Sub btHotCabana_Click(sender As Object, e As EventArgs) Handles btHotCabana.Click
-        Dim frm As New F1_CABAÑA
-        frm._nameButton = btHotCabana.Name
-        frm.Show()
-    End Sub
-
-    Private Sub btRemCliente_Click(sender As Object, e As EventArgs) Handles btRemCliente.Click
-        Dim frm As New F1_CLIENTE_R
-        frm._nameButton = btRemCliente.Name
-        frm.Show()
-    End Sub
-
-    Private Sub btHotReserva_Click(sender As Object, e As EventArgs) Handles btHotReserva.Click
+    Private Sub btHotReserva_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_HotelReserva
         frm.Show()
     End Sub
@@ -563,60 +507,37 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btLavServVenta_Click(sender As Object, e As EventArgs) Handles btLavServVenta.Click
-        Dim frm As New F1_ServicioVenta
-        frm._nameButton = btLavServVenta.Name
-        frm.Show()
-    End Sub
 
-    Private Sub btRemServVenta_Click(sender As Object, e As EventArgs) Handles btRemServVenta.Click
-        Dim frm As New F1_HojaRutaRemolque
-        frm._nameButton = btRemServVenta.Name
-        frm.Show()
-    End Sub
-
-    Private Sub btRemVehiRemolque_Click(sender As Object, e As EventArgs) Handles btRemVehiRemolque.Click
-        Dim frm As New F1_TCGVehiculo
-        frm._nameButton = btRemVehiRemolque.Name
-        frm.Show()
-    End Sub
-
-    Private Sub btLavProducto_Click(sender As Object, e As EventArgs) Handles btLavProducto.Click
-        Dim frm As New F1_Productos_L
-        frm._nameButton = btLavProducto.Name
-        frm.Show()
-    End Sub
-
-    Private Sub btLavRHistorialLav_Click(sender As Object, e As EventArgs) Handles btLavRHistorialLav.Click
+    Private Sub btLavRHistorialLav_Click(sender As Object, e As EventArgs)
         Dim frm As New Pr_HistorialSevLav
         frm.Show()
     End Sub
 
-    Private Sub btLavRGeneralServi_Click(sender As Object, e As EventArgs) Handles btLavRGeneralServi.Click
+    Private Sub btLavRGeneralServi_Click(sender As Object, e As EventArgs)
         Dim frm As New Pr_LavaderoGeneralServicios
         frm.Show()
     End Sub
 
-    Private Sub btLavRServLav_Click(sender As Object, e As EventArgs) Handles btLavRServLav.Click
+    Private Sub btLavRServLav_Click(sender As Object, e As EventArgs)
         Dim frm As New Pr_ServLavaderoGeneral
         frm.Show()
     End Sub
 
-    Private Sub btLavMovimiento_Click(sender As Object, e As EventArgs) Handles btLavMovimiento.Click
+    Private Sub btLavMovimiento_Click(sender As Object, e As EventArgs)
         Dim form As New F0_Movimiento
         form.pTitulo = "M O V I M I E N T O   D E   P R O D U C T O S"
         form.pTipo = 2
         form.Show()
     End Sub
 
-    Private Sub btLavKardexInventarioProducto_Click(sender As Object, e As EventArgs) Handles btLavKardexInventarioProducto.Click
+    Private Sub btLavKardexInventarioProducto_Click(sender As Object, e As EventArgs)
         Dim form As New F0_KardexInventario
         form.pTitulo = "K A R D E X   D E   P R O D U C T O S"
         form.pTipo = 2
         form.Show()
     End Sub
 
-    Private Sub btLavRSaldoInventarioProducto_Click(sender As Object, e As EventArgs) Handles btLavRSaldoInventarioProducto.Click
+    Private Sub btLavRSaldoInventarioProducto_Click(sender As Object, e As EventArgs)
         Dim form As New PR_StockActualEquipoProducto
         form.pTitulo = "S A L D O   A C T U A L   D E   P R O D U C T O S"
         form.pTipo = 2
@@ -633,7 +554,7 @@ Public Class P_Principal
         frm1.Show()
     End Sub
 
-    Private Sub btRHMarcaciones_Click(sender As Object, e As EventArgs) Handles btRHMarcaciones.Click
+    Private Sub btRHMarcaciones_Click(sender As Object, e As EventArgs)
         Dim frm1 As New F0_Asistencia
         frm1.Show()
     End Sub
@@ -643,58 +564,53 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btLavCompraProductos_Click(sender As Object, e As EventArgs) Handles btLavCompraProductos.Click
-        Dim frm As New F1_CompraLavadero
-        frm._nameButton = btLavCompraProductos.Name
-        frm.Show()
-    End Sub
 
-    Private Sub MetroTileItem27_Click(sender As Object, e As EventArgs) Handles btRemRpHistorialCliente.Click
+    Private Sub MetroTileItem27_Click(sender As Object, e As EventArgs)
         Dim frm As New Pr_HistorialRemolqueCliente
 
         frm.Show()
     End Sub
 
-    Private Sub btRemRpServGeneral_Click(sender As Object, e As EventArgs) Handles btRemRpServGeneral.Click
+    Private Sub btRemRpServGeneral_Click(sender As Object, e As EventArgs)
         Dim frm As New Pr_RemolqueServiciosGeneral
         frm.Show()
     End Sub
 
-   
 
-    Private Sub btRemRpServDetalle_Click_1(sender As Object, e As EventArgs) Handles btRemRpServDetalle.Click
+
+    Private Sub btRemRpServDetalle_Click_1(sender As Object, e As EventArgs)
         Dim frm As New Pr_ServRemolqueDetallado
         frm.Show()
     End Sub
 
-    Private Sub btReportePolitica_Click(sender As Object, e As EventArgs) Handles btReportePolitica.Click
+    Private Sub btReportePolitica_Click(sender As Object, e As EventArgs)
         Dim frm As New Pr_HistorialDeDescuentosLavadero
         frm.Show()
     End Sub
-    Private Sub btRHTurnos_Click(sender As Object, e As EventArgs) Handles btRHTurnos.Click
+    Private Sub btRHTurnos_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_Turnos
         'frm._nameButton = btLavCompraProductos.Name
         frm.Show()
     End Sub
 
-    Private Sub btRHPlanillaTurnos_Click(sender As Object, e As EventArgs) Handles btRHPlanillaTurnos.Click
+    Private Sub btRHPlanillaTurnos_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_PlanillaTurnos
         'frm._nameButton = btLavCompraProductos.Name
         frm.Show()
     End Sub
 
 
-    Private Sub btRHRepAsistencia_Click(sender As Object, e As EventArgs) Handles btRHRepAsistencia.Click
+    Private Sub btRHRepAsistencia_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_Asistencia
         frm.Show()
     End Sub
 
-    Private Sub btRHMarcacionCorr_Click(sender As Object, e As EventArgs) Handles btRHMarcacionCorr.Click
+    Private Sub btRHMarcacionCorr_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_MarcadoCorreccion
         frm.Show()
     End Sub
 
-    Private Sub btRHRepPlanillaMensual_Click(sender As Object, e As EventArgs) Handles btRHRepPlanillaMensual.Click
+    Private Sub btRHRepPlanillaMensual_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_PlanillaMensualMarcacion
         frm.Show()
     End Sub
@@ -711,12 +627,12 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub btSocRepSocioListarSocioPaganMortuoria_Click(sender As Object, e As EventArgs) Handles btSocRepSocioListarSocioPaganMortuoria.Click
+    Private Sub btSocRepSocioListarSocioPaganMortuoria_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_ListarSocioPaganMortuoria
         frm.Show()
     End Sub
 
-    Private Sub btHotResumenRes_Click(sender As Object, e As EventArgs) Handles btHotResumenRes.Click
+    Private Sub btHotResumenRes_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_HotelResumenReservas
         frm.Show()
     End Sub
@@ -726,12 +642,12 @@ Public Class P_Principal
         frm.Show()
     End Sub
 
-    Private Sub MetroTileItem1_Click(sender As Object, e As EventArgs) Handles btRecepcionLavadero.Click
+    Private Sub MetroTileItem1_Click(sender As Object, e As EventArgs)
         Dim frm As New F0_RecepcionLavadero
         frm.Show()
     End Sub
 
-    Private Sub btsalidaProductoAcb_Click(sender As Object, e As EventArgs) Handles btsalidaProductoAcb.Click
+    Private Sub btsalidaProductoAcb_Click(sender As Object, e As EventArgs)
         Dim frm As New PR_AcbSalidaProducto
         frm.Show()
     End Sub
@@ -754,7 +670,7 @@ Public Class P_Principal
 
     End Sub
 
-    Private Sub FP_Configuracion_Click(sender As Object, e As EventArgs) Handles FP_Configuracion.Click, FP_Certificacion.Click, FP_Escuela.Click, FP_Hotel.Click, FP_Lavadero.Click, FP_RecHumanos.Click, FP_Remolque.Click, FP_Socios.Click
+    Private Sub FP_Configuracion_Click(sender As Object, e As EventArgs) Handles FP_Configuracion.Click, FP_Certificacion.Click, FP_Escuela.Click
         Dim moduloItem As SideNavItem = CType(sender, SideNavItem)
         Dim myVersion As Version = CType(moduloItem.Tag, Version)
 

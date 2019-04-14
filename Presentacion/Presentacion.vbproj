@@ -2030,6 +2030,12 @@
     <None Include="Resources\I512x512_image_remove.png" />
     <None Include="Resources\I512x512_image_view.png" />
     <None Include="Resources\clase_reforzamiento_programar.png" />
+    <None Include="Resources\fondoMonaco.jpg" />
+    <None Include="Resources\fondomonaco02.jpg" />
+    <None Include="Resources\logo02.png" />
+    <None Include="Resources\logo01.png" />
+    <None Include="Resources\fondoMonaco04.jpg" />
+    <None Include="Resources\fondomonaco03.jpg" />
     <Content Include="Resources\OK.png" />
     <None Include="Resources\SOCIO.png" />
     <None Include="Resources\PAGOS.png" />
